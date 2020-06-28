@@ -21,6 +21,14 @@
 		CD3D942124A915B7000DF0F4 /* UIFont+Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D942024A915B7000DF0F4 /* UIFont+Facts.swift */; };
 		CD3D942324A91E4A000DF0F4 /* UIView+Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D942224A91E4A000DF0F4 /* UIView+Facts.swift */; };
 		CD3D942524A921EB000DF0F4 /* UIImageView+LoadImageURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D942424A921EB000DF0F4 /* UIImageView+LoadImageURL.swift */; };
+		CD3D942A24A92D53000DF0F4 /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D942924A92D53000DF0F4 /* Facts.swift */; };
+		CD3D943924A943DB000DF0F4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D943824A943DB000DF0F4 /* Reachability.swift */; };
+		CD3D943D24A946EB000DF0F4 /* WebserviceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D943C24A946EB000DF0F4 /* WebserviceConfig.swift */; };
+		CD3D943F24A9478C000DF0F4 /* WebserviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D943E24A9478C000DF0F4 /* WebserviceConstants.swift */; };
+		CD3D944124A947D2000DF0F4 /* WebserviceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944024A947D2000DF0F4 /* WebserviceEngine.swift */; };
+		CD3D944524A948A9000DF0F4 /* FactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944424A948A9000DF0F4 /* FactsService.swift */; };
+		CD3D944724A94932000DF0F4 /* FactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944624A94932000DF0F4 /* FactsAPI.swift */; };
+		CD3D944A24A9499C000DF0F4 /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944924A9499C000DF0F4 /* JSONResponseDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		CD3D942024A915B7000DF0F4 /* UIFont+Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Facts.swift"; sourceTree = "<group>"; };
 		CD3D942224A91E4A000DF0F4 /* UIView+Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Facts.swift"; sourceTree = "<group>"; };
 		CD3D942424A921EB000DF0F4 /* UIImageView+LoadImageURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImageURL.swift"; sourceTree = "<group>"; };
+		CD3D942924A92D53000DF0F4 /* Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
+		CD3D943824A943DB000DF0F4 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		CD3D943C24A946EB000DF0F4 /* WebserviceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceConfig.swift; sourceTree = "<group>"; };
+		CD3D943E24A9478C000DF0F4 /* WebserviceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceConstants.swift; sourceTree = "<group>"; };
+		CD3D944024A947D2000DF0F4 /* WebserviceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceEngine.swift; sourceTree = "<group>"; };
+		CD3D944424A948A9000DF0F4 /* FactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsService.swift; sourceTree = "<group>"; };
+		CD3D944624A94932000DF0F4 /* FactsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsAPI.swift; sourceTree = "<group>"; };
+		CD3D944924A9499C000DF0F4 /* JSONResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponseDecoder.swift; sourceTree = "<group>"; };
 		F219AFF3DC824D54AE3933E8 /* Pods_CountryFactsPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryFactsPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -121,6 +137,8 @@
 		CD3D93E724A8ED6B000DF0F4 /* CountryFactsPOC */ = {
 			isa = PBXGroup;
 			children = (
+				CD3D943A24A94405000DF0F4 /* Data Access */,
+				CD3D942724A92D23000DF0F4 /* Business Logic */,
 				CD3D941C24A8FCB9000DF0F4 /* ViewModels */,
 				CD3D941924A8FC16000DF0F4 /* Utils */,
 				CD3D940A24A8EE2C000DF0F4 /* UI */,
@@ -190,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				CD3D941A24A8FC33000DF0F4 /* Constants.swift */,
+				CD3D943824A943DB000DF0F4 /* Reachability.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -200,6 +219,67 @@
 				CD3D941D24A8FCD3000DF0F4 /* FactsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD3D942724A92D23000DF0F4 /* Business Logic */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D944824A9496B000DF0F4 /* Response Decoder */,
+				CD3D944224A94825000DF0F4 /* Services */,
+				CD3D942824A92D3F000DF0F4 /* Models */,
+			);
+			path = "Business Logic";
+			sourceTree = "<group>";
+		};
+		CD3D942824A92D3F000DF0F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D942924A92D53000DF0F4 /* Facts.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD3D943A24A94405000DF0F4 /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D943B24A94688000DF0F4 /* WebserviceEngine */,
+			);
+			path = "Data Access";
+			sourceTree = "<group>";
+		};
+		CD3D943B24A94688000DF0F4 /* WebserviceEngine */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D943C24A946EB000DF0F4 /* WebserviceConfig.swift */,
+				CD3D943E24A9478C000DF0F4 /* WebserviceConstants.swift */,
+				CD3D944024A947D2000DF0F4 /* WebserviceEngine.swift */,
+			);
+			path = WebserviceEngine;
+			sourceTree = "<group>";
+		};
+		CD3D944224A94825000DF0F4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D944324A9486D000DF0F4 /* Facts */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD3D944324A9486D000DF0F4 /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D944424A948A9000DF0F4 /* FactsService.swift */,
+				CD3D944624A94932000DF0F4 /* FactsAPI.swift */,
+			);
+			path = Facts;
+			sourceTree = "<group>";
+		};
+		CD3D944824A9496B000DF0F4 /* Response Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D944924A9499C000DF0F4 /* JSONResponseDecoder.swift */,
+			);
+			path = "Response Decoder";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,13 +450,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3D941E24A8FCD3000DF0F4 /* FactsViewModel.swift in Sources */,
+				CD3D942A24A92D53000DF0F4 /* Facts.swift in Sources */,
+				CD3D944124A947D2000DF0F4 /* WebserviceEngine.swift in Sources */,
 				CD3D941B24A8FC33000DF0F4 /* Constants.swift in Sources */,
+				CD3D944724A94932000DF0F4 /* FactsAPI.swift in Sources */,
+				CD3D944A24A9499C000DF0F4 /* JSONResponseDecoder.swift in Sources */,
 				CD3D942324A91E4A000DF0F4 /* UIView+Facts.swift in Sources */,
+				CD3D943F24A9478C000DF0F4 /* WebserviceConstants.swift in Sources */,
 				CD3D941224A8EF97000DF0F4 /* HomeTableViewCell.swift in Sources */,
 				CD3D93E924A8ED6B000DF0F4 /* AppDelegate.swift in Sources */,
 				CD3D942524A921EB000DF0F4 /* UIImageView+LoadImageURL.swift in Sources */,
+				CD3D943924A943DB000DF0F4 /* Reachability.swift in Sources */,
 				CD3D942124A915B7000DF0F4 /* UIFont+Facts.swift in Sources */,
 				CD3D940F24A8EE6F000DF0F4 /* HomeViewController.swift in Sources */,
+				CD3D944524A948A9000DF0F4 /* FactsService.swift in Sources */,
+				CD3D943D24A946EB000DF0F4 /* WebserviceConfig.swift in Sources */,
 				CD3D941724A8F452000DF0F4 /* UIColor+Facts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
