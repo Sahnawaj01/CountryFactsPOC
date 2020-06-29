@@ -16,8 +16,6 @@ class HomeTableViewCell: UITableViewCell {
     view.translatesAutoresizingMaskIntoConstraints = false
     view.clipsToBounds = true
     view.layer.cornerRadius = 4
-    view.layer.borderColor = UIColor.lightGray.cgColor
-    view.layer.borderWidth = 0.5
     view.backgroundColor = UIColor.white
     return view
   }()
@@ -78,7 +76,7 @@ class HomeTableViewCell: UITableViewCell {
 
   // Adding autolayout constraints on Container View
   fileprivate func addConstraintsContainerView() {
-    containerView.addShadow(offset: CGSize.init(width: 0, height: 3), color: UIColor.gray, radius: 4.0, opacity: 0.45)
+    containerView.addShadow(offset: CGSize.init(width: 0, height: 3), color: UIColor.navBarColor(), radius: 4.0, opacity: 0.45)
     containerView.heightAnchor.constraint(greaterThanOrEqualToConstant: 86).isActive = true
     containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8).isActive = true
     containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8).isActive = true
