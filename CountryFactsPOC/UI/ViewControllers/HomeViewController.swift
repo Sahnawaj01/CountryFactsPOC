@@ -9,12 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+
     // Properties
     private var viewModel: FactsViewModel?
-    
+
     static let cellIdentifier: String = "cell"
-    
+
     // Initilisation tableview with estamated height for cell
     private var tableView: UITableView = {
         let tableview = UITableView()
@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         tableview.register(HomeTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         return tableview
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Facts POC"

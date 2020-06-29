@@ -30,8 +30,13 @@ struct WebserviceEngine {
 
         let request = self.buildRequest(from: apiModel)
 
-        let task = URLSession.shared.dataTask(with: request) { responseData, response, error in
-            let jsonString = String(data: responseData!, encoding: .ascii)
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let responseData = data, error == nil else {
+                completion(.failure(NetworkError.custom(Message.networkNotReachable.rawValue)))
+                return
+            }
+
+            let jsonString = String(data: responseData, encoding: .ascii)
             guard let newData = jsonString?.data(using: .utf8, allowLossyConversion: true) else {
                 return
             }

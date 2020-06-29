@@ -16,7 +16,7 @@ enum Message: String {
     var value: String {
         switch self {
         case .networkNotReachable:
-            return "Network Not Available, Please check your connection."
+            return "Please check your network connection."
         case .header:
             return "Alert"
         }

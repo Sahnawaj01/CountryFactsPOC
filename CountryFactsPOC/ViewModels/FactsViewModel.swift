@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias GetFactsDataCompletionHandler = (Result<Facts, Error>) -> Void
+
 class FactsViewModel: NSObject {
     private var countryFacts: Facts?
     private var factsService: FactsServiceRequests?
@@ -32,7 +34,7 @@ class FactsViewModel: NSObject {
     }
 
     // fetch request for country facts
-    func requestData(completion: @escaping (Result<Facts, Error>) -> Void) {
+    func requestData(completion: @escaping GetFactsDataCompletionHandler) {
         if Reachability.isConnectedToNetwork() == false {
             completion(Result.failure(NetworkError.custom(Message.networkNotReachable.value)))
             return
