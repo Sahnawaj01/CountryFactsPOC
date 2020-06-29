@@ -67,8 +67,6 @@ class HomeViewController: UIViewController {
                     this.navigationItem.title = factsList.title ?? Message.header.value
                     this.tableView.reloadData()
                 case .failure(let error):
-                    this.tableView.refreshControl?.endRefreshing()
-                    this.loading(status: false)
                     this.showAlert(message: error.localizedDescription, delay: 0.3)
                 }
                 this.tableView.refreshControl?.endRefreshing()

@@ -22,13 +22,13 @@ struct FactsServiceRequests: FactsServiceRequestType {
         return router.requestAPI(apiModel: requestModel) { response in
             switch response {
             case .success(let serverData):
-                JSONResponseDecoder.decodeFrom(serverData, returningModelType: Facts.self, completion: { (allRestaurantResponse, error) in
+                JSONResponseDecoder.decodeFrom(serverData, returningModelType: Facts.self, completion: { (allResponse, error) in
                     if let parserError = error {
                         completion(.failure(parserError))
                         return
                     }
-                    if let restaurantResponse = allRestaurantResponse {
-                        completion(.success(restaurantResponse))
+                    if let factResponse = allResponse {
+                        completion(.success(factResponse))
                         return
                     }
                 })

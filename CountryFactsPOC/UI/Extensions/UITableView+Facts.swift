@@ -21,7 +21,6 @@ extension UITableView {
 
     func hideActivityIndicator() {
         DispatchQueue.main.async {
-            
             self.backgroundView = nil
         }
     }

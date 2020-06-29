@@ -35,7 +35,7 @@ struct WebserviceEngine {
             guard let newData = jsonString?.data(using: .utf8, allowLossyConversion: true) else {
                 return
             }
-            if let httpStatus = response as? HTTPURLResponse,  ![200, 201].contains(httpStatus.statusCode) {
+            if let httpStatus = response as? HTTPURLResponse, ![200, 201].contains(httpStatus.statusCode) {
                 completion(.failure(NetworkError.incorrectData(newData)))
             }
             completion(.success(newData))
