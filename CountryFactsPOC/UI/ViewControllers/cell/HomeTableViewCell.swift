@@ -111,9 +111,13 @@ class HomeTableViewCell: UITableViewCell {
     }
 
     // Setting Up Cell Detail With Row
-    func setUpCellDetail() {
-        nameLabel.text = "Test"
-        detailLabel.text = "----------TEST-------- -------- ------ ----------TEST-------- ----------TEST-------- ----------TEST-------- ----------TEST-------- ----------TEST-------- -------- ------"
-        imageview.loadImageUsingCache(withUrl: "http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg")
+    func updateCell(detail: Row) {
+        nameLabel.text = detail.title
+        detailLabel.text = detail.description
+        if let imagePath = detail.imageHref {
+            imageview.loadImageUsingCache(withUrl: imagePath)
+        } else {
+            imageview.image = UIImage(named: "placeholder")
+        }
     }
 }

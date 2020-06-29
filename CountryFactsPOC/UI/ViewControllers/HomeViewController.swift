@@ -9,12 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     // Properties
     private var viewModel: FactsViewModel?
-
+    
     static let cellIdentifier: String = "cell"
-
+    
     // Initilisation tableview with estamated height for cell
     private var tableView: UITableView = {
         let tableview = UITableView()
@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         tableview.register(HomeTableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         return tableview
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Facts POC"
@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupUI()
     }
-
+    
     // Setting initial setup view which is going to be called when view going to load into memory
     private func setupUI() {
         view.addSubview(tableView) // Adding tableview in controller view
@@ -44,8 +44,10 @@ class HomeViewController: UIViewController {
         tableView.refreshControl = UIRefreshControl()
         tableView.refreshControl?.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
         tableView.refreshControl?.tintColor = .black
+        fetchFactsDetials()
+        loading(status: true)
     }
-
+    
     private func setupAutoLayout() {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
@@ -54,26 +56,48 @@ class HomeViewController: UIViewController {
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 
+    // Preparing View Models Initialization
     private func fetchFactsDetials() {
         viewModel = FactsViewModel()
+        viewModel?.requestData(completion: { [weak self] apiResult in
+            guard let this = self else { return }
+            DispatchQueue.main.async {
+                switch apiResult {
+                case .success(let factsList):
+                    this.navigationItem.title = factsList.title ?? Message.header.value
+                    this.tableView.reloadData()
+                case .failure(let error):
+                    this.tableView.refreshControl?.endRefreshing()
+                    this.loading(status: false)
+                    this.showAlert(message: error.localizedDescription, delay: 0.3)
+                }
+                this.tableView.refreshControl?.endRefreshing()
+                this.loading(status: false)
+            }
+        })
     }
 
+    private func loading(status: Bool) {
+        status ? tableView.showActivityIndicator() : tableView.hideActivityIndicator()
+    }
     // MARK: ACTIONS
     @objc private func refreshAction() {
-
+        fetchFactsDetials()
     }
 }
 
 // MARK: UITableView DataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel?.numberOfRows() ?? 0
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.cellIdentifier, for: indexPath) as? HomeTableViewCell else { return UITableViewCell() }
-        cell.setUpCellDetail()
+        if let item = viewModel?.getRow(at: indexPath.row) {
+            cell.updateCell(detail: item)
+        }
         return cell
     }
-
+    
 }

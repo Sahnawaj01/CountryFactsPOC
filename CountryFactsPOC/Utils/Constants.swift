@@ -7,3 +7,18 @@
 //
 
 import Foundation
+// For Application Message
+
+enum Message: String {
+    case networkNotReachable
+    case header
+
+    var value: String {
+        switch self {
+        case .networkNotReachable:
+            return "Network Not Available, Please check your connection."
+        case .header:
+            return "Alert"
+        }
+    }
+}

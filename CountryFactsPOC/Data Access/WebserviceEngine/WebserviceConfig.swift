@@ -32,7 +32,6 @@ protocol APIModelType {
 struct APIRequestModel: APIModelType {
     var api: APIProtocol
     var parameters: [String: Any]?
-
     init(api: APIProtocol, parameters: [String: Any]? = nil) {
         self.api = api
         self.parameters = parameters

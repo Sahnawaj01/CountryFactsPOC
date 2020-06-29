@@ -29,6 +29,8 @@
 		CD3D944524A948A9000DF0F4 /* FactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944424A948A9000DF0F4 /* FactsService.swift */; };
 		CD3D944724A94932000DF0F4 /* FactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944624A94932000DF0F4 /* FactsAPI.swift */; };
 		CD3D944A24A9499C000DF0F4 /* JSONResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944924A9499C000DF0F4 /* JSONResponseDecoder.swift */; };
+		CD3D944C24A95171000DF0F4 /* UITableView+Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944B24A95171000DF0F4 /* UITableView+Facts.swift */; };
+		CD3D944E24A95DF3000DF0F4 /* UIViewController+Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D944D24A95DF3000DF0F4 /* UIViewController+Facts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		CD3D944424A948A9000DF0F4 /* FactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsService.swift; sourceTree = "<group>"; };
 		CD3D944624A94932000DF0F4 /* FactsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsAPI.swift; sourceTree = "<group>"; };
 		CD3D944924A9499C000DF0F4 /* JSONResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONResponseDecoder.swift; sourceTree = "<group>"; };
+		CD3D944B24A95171000DF0F4 /* UITableView+Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Facts.swift"; sourceTree = "<group>"; };
+		CD3D944D24A95DF3000DF0F4 /* UIViewController+Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Facts.swift"; sourceTree = "<group>"; };
 		F219AFF3DC824D54AE3933E8 /* Pods_CountryFactsPOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryFactsPOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -191,6 +195,8 @@
 				CD3D942024A915B7000DF0F4 /* UIFont+Facts.swift */,
 				CD3D942224A91E4A000DF0F4 /* UIView+Facts.swift */,
 				CD3D942424A921EB000DF0F4 /* UIImageView+LoadImageURL.swift */,
+				CD3D944B24A95171000DF0F4 /* UITableView+Facts.swift */,
+				CD3D944D24A95DF3000DF0F4 /* UIViewController+Facts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD3D941E24A8FCD3000DF0F4 /* FactsViewModel.swift in Sources */,
+				CD3D944C24A95171000DF0F4 /* UITableView+Facts.swift in Sources */,
 				CD3D942A24A92D53000DF0F4 /* Facts.swift in Sources */,
 				CD3D944124A947D2000DF0F4 /* WebserviceEngine.swift in Sources */,
 				CD3D941B24A8FC33000DF0F4 /* Constants.swift in Sources */,
@@ -457,6 +464,7 @@
 				CD3D944A24A9499C000DF0F4 /* JSONResponseDecoder.swift in Sources */,
 				CD3D942324A91E4A000DF0F4 /* UIView+Facts.swift in Sources */,
 				CD3D943F24A9478C000DF0F4 /* WebserviceConstants.swift in Sources */,
+				CD3D944E24A95DF3000DF0F4 /* UIViewController+Facts.swift in Sources */,
 				CD3D941224A8EF97000DF0F4 /* HomeTableViewCell.swift in Sources */,
 				CD3D93E924A8ED6B000DF0F4 /* AppDelegate.swift in Sources */,
 				CD3D942524A921EB000DF0F4 /* UIImageView+LoadImageURL.swift in Sources */,

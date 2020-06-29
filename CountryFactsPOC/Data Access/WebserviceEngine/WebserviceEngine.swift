@@ -12,6 +12,7 @@ enum NetworkError: Error {
     case incorrectData(Data)
     case incorrectURL
     case unknown
+    case custom(String)
 }
 
 typealias WebServiceCompletionBlock = (Result<Data, Error>) -> Void
