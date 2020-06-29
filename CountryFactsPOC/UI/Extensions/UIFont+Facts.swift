@@ -10,20 +10,20 @@ import UIKit
 
 extension UIFont {
 
-    class func avenirBlack(ofSize fontSize: CGFloat) -> UIFont? {
-        return UIFont(name: "Avenir-Black", size: fontSize)
-    }
+  class func avenirBlack(ofSize fontSize: CGFloat) -> UIFont? {
+    return UIFont(name: "Avenir-Black", size: fontSize)
+  }
 
-    class func avenirBook(ofSize fontSize: CGFloat) -> UIFont? {
-        return UIFont(name: "Avenir-Book", size: fontSize)
-    }
+  class func avenirBook(ofSize fontSize: CGFloat) -> UIFont? {
+    return UIFont(name: "Avenir-Book", size: fontSize)
+  }
 
-    class func avenirLight(ofSize fontSize: CGFloat) -> UIFont? {
-        return UIFont(name: "Avenir-Light", size: fontSize)
-    }
+  class func avenirLight(ofSize fontSize: CGFloat) -> UIFont? {
+    return UIFont(name: "Avenir-Light", size: fontSize)
+  }
 
-    class func avenirMedium(ofSize fontSize: CGFloat) -> UIFont? {
-        return UIFont(name: "Avenir-Medium", size: fontSize)
-    }
+  class func avenirMedium(ofSize fontSize: CGFloat) -> UIFont? {
+    return UIFont(name: "Avenir-Medium", size: fontSize)
+  }
 
 }

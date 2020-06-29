@@ -10,15 +10,15 @@ import Foundation
 // For Application Message
 
 enum Message: String {
-    case networkNotReachable
-    case header
+  case networkNotReachable
+  case header
 
-    var value: String {
-        switch self {
-        case .networkNotReachable:
-            return "Please check your network connection."
-        case .header:
-            return "Alert"
-        }
+  var value: String {
+    switch self {
+    case .networkNotReachable:
+      return "Please check your network connection."
+    case .header:
+      return "Alert"
     }
+  }
 }

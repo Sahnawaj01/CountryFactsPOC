@@ -9,19 +9,19 @@
 import UIKit
 
 extension UITableView {
-    func showActivityIndicator() {
-        DispatchQueue.main.async {
-            let activityView = UIActivityIndicatorView(style: .whiteLarge)
-            activityView.color = UIColor.navBarColor()
-            self.backgroundView = activityView
-            activityView.hidesWhenStopped = true
-            activityView.startAnimating()
-        }
+  func showActivityIndicator() {
+    DispatchQueue.main.async {
+      let activityView = UIActivityIndicatorView(style: .whiteLarge)
+      activityView.color = UIColor.navBarColor()
+      self.backgroundView = activityView
+      activityView.hidesWhenStopped = true
+      activityView.startAnimating()
     }
+  }
 
-    func hideActivityIndicator() {
-        DispatchQueue.main.async {
-            self.backgroundView = nil
-        }
+  func hideActivityIndicator() {
+    DispatchQueue.main.async {
+      self.backgroundView = nil
     }
+  }
 }

@@ -9,7 +9,7 @@
 import XCTest
 @testable import CountryFactsPOC
 class FactsViewModelTest: XCTestCase {
-    
+
     var viewModel: FactsViewModel!
     //    var dataSource : GenericDataSource<Rows>!
     //    fileprivate var service : MockCurrencyService!

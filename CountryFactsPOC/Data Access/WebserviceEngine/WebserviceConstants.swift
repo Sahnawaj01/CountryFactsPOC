@@ -9,5 +9,5 @@
 import Foundation
 
 enum WebserviceConstants {
-    static let baseURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/"
+  static let baseURL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/"
 }
