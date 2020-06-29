@@ -12,26 +12,26 @@ import XCTest
 // Test cases class for executing test cases
 class CountryFactsPOCTests: XCTestCase {
     var factRequest: FactsServiceRequests!
-    
+
     // Initialization of instances
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         factRequest = FactsServiceRequests()
     }
-    
+
     // Tear down methode invoked after the code executes
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         factRequest = nil
     }
-    
+
     // Verify api call
     func testApiResponse() {
-        let expectations = expectation(description: "Api Response")
+        let expectations = expectation(description: "API Service Response")
         factRequest.getFactsData(completion: { apiResult in
             switch apiResult {
             case .failure(_) :
-                XCTAssert(false, "Data is not receiving from server")
+                XCTAssert(false, "Response data failed")
             default:
                 break
             }
